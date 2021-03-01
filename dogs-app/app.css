@@ -2,13 +2,13 @@ body {
   background-color: rgb(245, 245, 245);
 }
 
-section {
+#dogs-container {
   display: flex;
   flex-wrap: wrap;
 }
 
-div {
+.dog-card {
   margin: 1rem;
   padding: 1rem;
-  box-shadow: 2px 2px 5px rgb(211, 211, 211);
+  box-shadow: 1px 1px 3px rgb(232, 232, 232);
 }

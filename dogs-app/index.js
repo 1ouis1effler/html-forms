@@ -1,9 +1,9 @@
-console.log("JavaScript loaded");
+console.log('JavaScript loaded');
 
-baseURL = "http://localhost:3000";
-dogsURL = `${baseURL}/dogs`;
+const baseURL = 'http://localhost:3000';
+const dogsURL = `${baseURL}/dogs`;
 
-const dogsSection = document.querySelector("section");
+const dogsSection = document.querySelector('#dogs-container');
 
 fetch(dogsURL)
   .then(parseJSON)
@@ -14,12 +14,13 @@ function displayDogs(dogs) {
 }
 
 function showDog(dog) {
-  const dogCard = document.createElement("div");
+  const dogCard = document.createElement('div');
+  dogCard.classList.add('dog-card');
   
-  const name = document.createElement("h2");
+  const name = document.createElement('h2');
   name.textContent = dog.name; 
   
-  const age = document.createElement("p");
+  const age = document.createElement('p');
   age.textContent = `${dog.age} years old`;
 
   dogCard.append(name, age);
